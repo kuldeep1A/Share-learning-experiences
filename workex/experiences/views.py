@@ -8,5 +8,5 @@ def experiences_list(request):
 
 
 def experience_detail(request, pk):
-    experience = Experience()
+    experience = Experience.get_constraints(pk)
     return render(request, 'experiences/experience_detail.html', {'experience': experience})
