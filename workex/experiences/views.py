@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from .models import Experiences
+from .models import Experience
 
-
-# Create your views here.
 
 def experiences_list(request):
+    experiences = Experience()
+    return render(request, 'experiences/experience_list.html', {'experiences': experiences})
 
 
 def experience_detail(request, pk):
+    experience = Experience()
+    return render(request, 'experiences/experience_detail.html', {'experience': experience})
